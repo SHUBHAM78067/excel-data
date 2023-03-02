@@ -1,0 +1,150 @@
+<minion:View xmlns:core="sap.ui.core" xmlns:minion="sap.ui.core.mvc" xmlns:l="sap.ui.layout" 
+             xmlns:u="sap.ui.unified" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" 
+             xmlns:t="sap.ui.table" controllerName="mickey.controller.Main">
+    <Page id="page" title="Read From Excel">
+        <customHeader>
+            <Bar>
+                <contentMiddle>
+                    <Label text="Read Data From Excel" />
+                </contentMiddle>
+                <contentRight>
+                    <u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" 
+                                    fileType="XLSX,xlsx" icon="sap-icon://upload" iconFirst="true" 
+                                    style="Emphasized" change="onUpload" />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <Table items="{localModel>/items}">
+                <columns>
+                    <Column>
+                        <Label text="Name" />
+                    </Column>
+                    <Column>
+                        <Label text="Age" />
+                    </Column>
+                    <Column>
+                        <Label text="Job" />
+                    </Column>
+                    <Column>
+                        <Label text="Address" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{localModel>Name}" />
+                            <Text text="{localModel>Age}" />
+                            <Text text="{localModel>Job}" />
+                            <Text text="{localModel>Address}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+
+    <Button id="btnDealer" text="Dealer" press="onDealer" tooltip="Dealer" />
+    <Button id="btnCsm" text="CSM" press="onCsm" tooltip="CSM" />
+    <t:Table id="idEmpTab" visibleRowCount="5" selectionMode="Single" rowSelectionChange="onRowSelect" showOverlay="true">
+        <!-- <t:extension>
+            <OverflowToolbarButton text="Download" icon="sap-icon://download" press="onExport" tooltip="Download" />
+        </t:extension> -->
+
+        <t:columns>
+            <t:Column label="{i18n>XLBL_EMPID}" id="idEmpId">
+                <t:template>
+                    <Text text="{empId}" />
+                </t:template>
+            </t:Column>
+            <t:Column  >
+                <t:label>
+                    <Text text="{i18n>XLBL_EMPNAME}" />
+                </t:label>
+                <t:template>
+                    <Input id="idEmpName" value="{path : 'empName', formatter: '.formatter.convertName'}" editable="false"/>
+                </t:template>
+            </t:Column>
+            <t:Column >
+                <t:label>
+                    <Text text="Customer Name" />
+                </t:label>
+                <t:template>
+                    <Input id="idCustName" value="{path : 'custName', formatter: '.formatter.convertName'}" editable="false"/>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XLBL_SALARY}">
+                <t:template>
+                    <HBox>
+                        <Text text="{ parts: [ { path: 'salary'  },
+                                               { path: 'currency'}
+                                             ],
+                                      formatter: '.formatter.getAmountFormatted'
+                        }" />
+                    </HBox>
+                </t:template>
+            </t:Column>
+            <!-- <t:Column label="{i18n>XLBL_SMK}" id="idSmoker">
+                <t:template>
+                    <CheckBox selected="{= ${smoker} === 'true' ? true : false}" />
+                </t:template>
+            </t:Column> -->
+            <t:Column label="{i18n>XLBL_GEN}">
+                <t:template>
+                  <Select id="selectGen" selectedKey="{gender}" change="onSelectGenChange" editable="false">
+                        <items>
+                            <core:Item key="M" text="Male" />
+                            <core:Item key="F" text="Female" />
+                            
+                        </items>
+                    </Select>
+                    <!-- <Image width="30px" height="30px" src="{gender}" /> -->
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XLBL_RATE}" >
+                <t:template>
+                    <RatingIndicator id="idRating" value="{rating}" editable="false"/>
+                </t:template>
+            </t:Column>
+            <t:Column label="{i18n>XLBL_MSTAT}" id="idMstat">
+                <t:template>
+                    <Select id="select" selectedKey="{mStat}" change="onSelectChange" editable="false">
+                        <items>
+                            <core:Item key="B" text=" " />
+                            <core:Item key="M" text="Married" />
+                            <core:Item key="S" text="Single" />
+                            <core:Item key="H" text="Happily Married" />
+                        </items>
+                    </Select>
+                </t:template>
+            </t:Column>
+            <t:Column id="idAdd">
+                <t:label>
+                    <Text text="Customer Add." />
+                </t:label>
+                <t:template>
+                    <Input editable="false"/>
+                </t:template>
+            </t:Column>
+        </t:columns>
+    </t:Table>
+
+    <!-- <f:SimpleForm title="{i18n>XTIT_MYEMP}" editable="true" id="idSimple">
+      
+        <f:content>
+            <Label text="{i18n>XLBL_EMPID}"></Label>
+            <Input id="idEmpId" width="40%" value="{empId}" ></Input>
+            <Label text="{i18n>XLBL_EMPNAME}"></Label>
+            <Input id="idEmpName" width="60%" value="{path : 'empName'}" ></Input>
+            <Label text="{i18n>XLBL_SALARY}"></Label>
+            <Input id="idSal" width="30%" value="{path : 'salary'}" enabled="{= ${empName} === 'Ananya' ? false : true}"></Input>
+            <Label text="{i18n>XLBL_CURR}"></Label>
+            <Input id="idCurr" width="20%" value="{path : 'currency'}" ></Input>
+            <Label text="{i18n>XLBL_SMK}"></Label>
+            <CheckBox id="idSmk" width="40%" selected="{smoker}" ></CheckBox>
+        </f:content>
+    </f:SimpleForm> -->
+    <!-- <Switch change="onSwtChange"></Switch>
+    <Button text="{i18n>XBUT_CHANGE}" press="onChangeData"></Button>
+    <Button text="{i18n>XBUT_NEW}" press="anotherFx"></Button> -->
+</minion:View>

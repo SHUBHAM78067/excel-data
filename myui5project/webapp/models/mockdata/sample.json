@@ -1,0 +1,202 @@
+{
+    "empStr": {
+        "empId": "1003",
+        "empName": "Anubhav",
+        "salary": 9000,
+        "currency": "INR",
+        "smoker": true,
+        "gender": "https://cdn-icons-png.flaticon.com/512/4128/4128176.png",
+        "mStat": "S",
+        "rating": 4,
+        "city": "Gurgaon",
+        "country": "IN",
+        "enabled": true
+    },
+    "empTab": [
+        {
+            "empId": "1000",
+            "empName": "Anubhav",
+            "custName": "Ram",
+            "salary": 9000,
+            "currency": "INR",
+            "smoker": true,
+            "gender": "M",
+            "mStat": " ",
+            "rating": 4,
+            "city": "Gurgaon",
+            "country": "IN"
+        },
+        {
+            "empId": "1002",
+            "empName": "Anu",
+            "custName": "Sita",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "F",
+            "mStat": "H",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1003",
+            "empName": "Govind",
+            "custName": "Laxman",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "M",
+            "mStat": "M",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1004",
+            "empName": "Gopal",
+            "custName": "Bali",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "M",
+            "mStat": "M",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1005",
+            "empName": "Surya",
+            "custName": "Jatayu",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "M",
+            "mStat": "S",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1002",
+            "empName": "Sarla",
+            "custName": "Sugriv",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "F",
+            "mStat": "H",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1002",
+            "empName": "Abhishek",
+            "custName": "Angad",
+            "salary": 5800,
+            "currency": "USD",
+            "smoker": true,
+            "gender": "M",
+            "mStat": "M",
+            "rating": 3,
+            "city": "delhi",
+            "country": "IN"
+        },
+        {
+            "empId": "1003",
+            "empName": "Sonia",
+            "custName": "Dashrath",
+            "salary": 15000,
+            "currency": "AED",
+            "smoker": false,
+            "gender": "F",
+            "mStat": "H",
+            "rating": 2,
+            "city": "Bangaluru",
+            "country": "IN"
+        },
+        {
+            "empId": "1003",
+            "empName": "Sonia2",
+            "custName": "Susain",
+            "salary": 15000,
+            "currency": "AED",
+            "smoker": false,
+            "gender": "F",
+            "mStat": "S",
+            "rating": 2,
+            "city": "Bangaluru",
+            "country": "IN"
+        },
+        {
+            "empId": "1000",
+            "empName": "Riya",
+            "custName": "Mahadev",
+            "salary": 8500,
+            "currency": "AED",
+            "smoker": false,
+            "gender": "F",
+            "mStat": " ",
+            "rating": 5,
+            "city": "Dubai",
+            "country": "UAE"
+        },
+        {
+            "empId": "1005",
+            "empName": "Rafael",
+            "custName": "Sagar",
+            "salary": 8590,
+            "currency": "EUR",
+            "smoker": true,
+            "gender": "M",
+            "mStat": "S",
+            "rating": 3,
+            "city": "Berlin",
+            "country": "DE"
+        },
+        {
+            "empId": "1006",
+            "empName": "Ravikanth",
+            "custName": "Nal",
+            "salary": 18000,
+            "currency": "USD",
+            "smoker": false,
+            "gender": "M",
+            "mStat": "M",
+            "rating": 3,
+            "city": "Chicago",
+            "country": "US"
+        },
+        {
+            "empId": "1000",
+            "empName": "Megha",
+            "custName": "Nil",
+            "salary": 9800,
+            "currency": "CAD",
+            "smoker": false,
+            "gender": "F",
+            "mStat": " ",
+            "rating": 5,
+            "city": "Torronto",
+            "country": "CA"
+        }
+    ],
+    "cities": [
+    {
+        "name": "Dubai"
+    },{
+        "name": "Mumbai"
+    },{
+        "name": "Chennai"
+    },{
+        "name": "Chicago"
+    },{
+        "name": "Toprronto"
+    },{
+        "name": "Hyderabad"
+    },{
+        "name": "Bangaluru"
+    }]
+}
